@@ -3,6 +3,9 @@
 ## 📝 Sobre o Projeto
 Um gerador de senhas moderno e responsivo que cria senhas aleatórias e seguras com uma interface amigável e intuitiva.
 
+## Link do Projeto
+[Clique aqui para acessar o projeto](https://projeto-gerador-de-senhas-eight.vercel.app/)
+
 ## ✨ Características
 - 🎨 Design moderno com gradiente animado
 - 📱 Interface totalmente responsiva
@@ -24,9 +27,3 @@ Um gerador de senhas moderno e responsivo que cria senhas aleatórias e seguras 
 - JavaScript (Vanilla)
 - Design responsivo
 - Animações CSS
-
-## 🔒 Segurança
-- Geração de senhas aleatórias
-- Mínimo de 4 caracteres
-- Combinação de diferentes tipos de caracteres
-- Feedback visual para ações do usuário
