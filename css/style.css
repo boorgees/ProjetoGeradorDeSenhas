@@ -1,0 +1,195 @@
+:root {
+    font-size: 10px;
+    margin: 0;
+    --cor-primaria: #a8e6cf;
+    --cor-secundaria: #dcedc1;
+    --cor-terciaria: #ffd3b6;
+    --cor-quaternaria: #ffaaa5;
+    --cor-texto: #2c3e50;
+    --cor-borda: rgba(255, 255, 255, 0.8);
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.containerText {
+    --fonte-padrao: "Ubuntu", sans-serif;
+    --peso-fonte: 500;
+    --estilo-fonte: normal;
+    font-family: var(--fonte-padrao);
+    font-weight: var(--peso-fonte);
+    font-style: var(--estilo-fonte);
+    font-size: var(--tamanho-fonte);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(-45deg, var(--cor-primaria), var(--cor-secundaria), var(--cor-terciaria), var(--cor-quaternaria));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: var(--cor-texto);
+}
+
+.tituloStl {
+    font-size: 3.5rem;
+    font-family: var(--fonte-padrao);
+    font-weight: 700;
+    font-style: var(--estilo-fonte);
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.secaoInput {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 1.5rem;
+    padding: 2rem;
+    gap: 1rem;
+    border-style: solid;
+    border-radius: 1.5rem;
+    border-color: var(--cor-borda);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+}
+
+.secaoInput:hover {
+    transform: translateY(-5px);
+}
+
+.secaoQte, .secaoSenha {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.labels {
+    font-size: 2rem;
+    font-family: var(--fonte-padrao);
+    font-weight: 600;
+    font-style: var(--estilo-fonte);
+    color: var(--cor-texto);
+}
+
+.inputSenha,
+.inputQte {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--cor-borda);
+    border-radius: 0.8rem;
+    height: 2.5rem;
+    width: 25rem;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+.inputSenha:focus,
+.inputQte:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 2px rgba(168, 230, 207, 0.3);
+}
+
+.button {
+    border-radius: 1rem;
+    border: 2px solid var(--cor-borda);
+    border-style: solid;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--cor-texto);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--cor-primaria);
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra);
+}
+
+.labelCopiar {
+    font-size: 1.6rem;
+    font-family: var(--fonte-padrao);
+    font-weight: 600;
+    font-style: var(--estilo-fonte);
+    color: var(--cor-texto);
+    text-align: center;
+    display: none;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .headerStl {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .tituloStl {
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .secaoInput {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        padding: 1rem;
+        margin: 0.5rem auto;
+    }
+
+    .secaoQte, .secaoSenha {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 0.8rem;
+    }
+
+    .labels {
+        text-align: center;
+        width: 100%;
+    }
+
+    .inputSenha,
+    .inputQte {
+        width: 100%;
+        max-width: 20rem;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 20rem;
+    }
+}

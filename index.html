@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+
+<script src="script/main.js" defer></script>
+
+</head>
+
+<body>
+    <nav>
+        <header class="headerStl">
+            <h1 id="titulo" class="tituloStl">Gerador de Senhas Seguras</h1>
+        </header>
+    </nav>
+    <main>
+        <section class="secaoInput">
+            <div class="secaoQte">
+                <label for="qtdNumeros" class="labels">Quantidade de caracteres </label>
+                <input type="number" name="qtdNumeros" id="qtdNumeros" class="inputQte"
+                    placeholder="Insira a quantidade">
+                <button type="button" class="button" id="buttonGerar">Gerar</button>
+            </div>
+            <div class="secaoSenha">
+                <label for="visorSenha" class="labels">Senha gerada </label>
+                <input type="text" name="senhaGerada" id="visorSenha" class="inputSenha"
+                    placeholder="Sua senha virá aqui">
+                <button type="button" class="button" id="buttonCopiar">Copiar</button>
+                <label for="buttonCopiar" class="labelCopiar">Senha copiada!</label>
+            </div>
+        </section>
+    </main>
+
+   
+</body>
+
+</html>
